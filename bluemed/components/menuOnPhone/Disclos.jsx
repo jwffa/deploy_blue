@@ -3,6 +3,7 @@ import React from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from '@headlessui/react'
 import { ChevronDown } from "lucide-react";
 import { Button } from '@headlessui/react';
+import { Link } from 'react-router-dom';
 
 const Disclos = () => {
   return (
@@ -30,8 +31,8 @@ const Disclos = () => {
               leaveTo="opacity-0 max-h-0"
               >
               <DisclosurePanel className="mt-2 text-sm/5 text-white/50 flex flex-col items-start gap-4">
-                <Button>ავტორიზაცია</Button>
-                <Button>რეგისტრაცია</Button>
+                <Link to={"/login"}><Button>ავტორიზაცია</Button></Link>
+                <Link to={"/register"}><Button>რეგისტრაცია</Button></Link>
                 <Button>აპის გადმოწერა</Button>
               </DisclosurePanel>
             </Transition>
